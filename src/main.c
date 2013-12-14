@@ -1,22 +1,50 @@
 #include "bubblesort.h"
+#include "insertionsort.h"
+#include "selectionsort.h"
 #include <stdio.h>
+
+long list[10] = { 10,11,8,19,5,3,22,8,35,13};
+
+void resetList();
+void printList(char* title);
 
 int main() {
   
-  int i;
-  long list[10] = { 10,11,8,19,5,3,22,8,35,13};
-  
-  printf("data: ");
-  for(i=0;i<10;i++)
-    printf("%ld ", list[i]);
-  printf("\n");
+  printList("data");
   
   bubbleSort(list,10);
+  printList("bubblesort");
   
+  
+  resetList();
+  
+  insertionSort(list,10);
+  printList("insertionsort");
+  
+  resetList();
+  
+  selectionSort(list,10);
+  printList("selectionsort");
 
-  printf("sorting: ");
+}
+
+void resetList() {
+  list[0] = 10;
+  list[1] = 11;
+  list[2] = 8;
+  list[3] = 19;
+  list[4] = 5;
+  list[5] = 3;
+  list[6] = 22;
+  list[7] = 8;
+  list[8] = 35;
+  list[9] = 13;  
+}
+
+void printList(char* title) {
+  int i;
+  printf("%s :",title);
   for(i=0;i<10;i++)
     printf("%ld ", list[i]);
   printf("\n");
-
 }
