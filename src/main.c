@@ -1,6 +1,8 @@
 #include "bubblesort.h"
 #include "insertionsort.h"
 #include "selectionsort.h"
+#include "heapsort.h"
+#include "quicksort.h"
 #include <stdio.h>
 
 long list[10] = { 10,11,8,19,5,3,22,8,35,13};
@@ -25,6 +27,17 @@ int main() {
   
   selectionSort(list,10);
   printList("selectionsort");
+  
+  resetList();
+  
+  heapSort(list,10);
+  printList("heapsort");
+  
+  resetList();
+  
+  quickSort(list,0,9);
+  printList("quicksort");
+
 
 }
 
