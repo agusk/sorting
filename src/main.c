@@ -3,6 +3,8 @@
 #include "selectionsort.h"
 #include "heapsort.h"
 #include "quicksort.h"
+#include "mergesort.h"
+#include "radixsort.h"
 #include <stdio.h>
 
 long list[10] = { 10,11,8,19,5,3,22,8,35,13};
@@ -37,7 +39,16 @@ int main() {
   
   quickSort(list,0,9);
   printList("quicksort");
+  
+  resetList();
+  
+  mergeSort(list,0,9,10);
+  printList("mergesort");
 
+  resetList();
+  
+  radixSort(list,10);
+  printList("radixsort");  
 
 }
 
