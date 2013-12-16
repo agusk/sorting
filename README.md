@@ -3,6 +3,16 @@
 Sample codes for sorting algorithms written in C.
 
 
+## Usage
+
+You need GCC and MAKE to compile codes. You can compile and run codes by typing these commands.
+
+	$ git clone https://github.com/agusk/sorting.git
+	$ cd sorting/src/
+	$ make
+	$ ./test
+
+
 ## License
 
 The MIT License (MIT)
