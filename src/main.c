@@ -5,6 +5,9 @@
 #include "quicksort.h"
 #include "mergesort.h"
 #include "radixsort.h"
+#include "gnomesort.h"
+#include "shellsort.h"
+#include "cyclesort.h"
 #include <stdio.h>
 
 long list[10] = { 10,11,8,19,5,3,22,8,35,13};
@@ -49,6 +52,21 @@ int main() {
   
   radixSort(list,10);
   printList("radixsort");  
+
+  resetList();
+  
+  gnomeSort(list,10);
+  printList("gnomesort");    
+  
+  resetList();
+  
+  shellSort(list,10);
+  printList("shellsort");     
+  
+  resetList();
+  
+  cycleSort(list,10);
+  printList("cyclesort");     
 
 }
 
